@@ -12,10 +12,11 @@ body {
   align-items: center;
   height: 100vh;
 }
-body .container {
+
+.container {
   max-width: 340px;
 }
-body .container .card {
+.container .card {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
   display: flex;
@@ -25,16 +26,19 @@ body .container .card {
   justify-content: center;
   align-items: center;
 }
-body .container .card img {
+.container .card .img-desktop {
+  display: none;
+}
+.container .card img {
   max-width: 100%;
 }
-body .container .card .card-content {
+.container .card .card-content {
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-body .container .card .card-content .card-text span {
+.container .card .card-content .card-text span {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -42,47 +46,86 @@ body .container .card .card-content .card-text span {
   color: hsl(228deg, 12%, 48%);
   font-size: 0.7rem;
 }
-body .container .card .card-content .card-text h1 {
+.container .card .card-content .card-text h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   padding: 0.8rem 0;
   font-size: 2.1rem;
 }
-body .container .card .card-content .card-text p {
+.container .card .card-content .card-text p {
   font-family: "Montserrat", sans-serif;
   color: hsl(228deg, 12%, 48%);
   line-height: 1.5rem;
   font-size: 0.88rem;
 }
-body .container .card .card-content .price {
+.container .card .card-content .price {
   display: flex;
   align-items: center;
   gap: 1.3rem;
 }
-body .container .card .card-content .price .price-1 {
+.container .card .card-content .price .price-1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 2.1rem;
   color: hsl(158deg, 36%, 37%);
 }
-body .container .card .card-content .price .price-2 {
+.container .card .card-content .price .price-2 {
   font-family: "Montserrat", sans-serif;
   color: hsl(228deg, 12%, 48%);
   font-size: small;
   text-decoration: line-through;
 }
-body .container .card .card-content .btn-main {
+.container .card .card-content .btn-main {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.8rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(158deg, 36%, 37%);
   border: none;
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
+}
+.container .card .card-content .btn-main span {
+  font-size: 0.9rem;
+}
+.container .card .card-content .btn-main:hover {
+  background-color: #1a4031;
+}
+
+@media (min-width: 690px) {
+  .container {
+    max-width: 675px;
+  }
+  .container .card {
+    flex-direction: row;
+  }
+  .container .card .card-image {
+    flex: 1;
+  }
+  .container .card .card-image .img-desktop {
+    display: flex;
+  }
+  .container .card .card-image .img-mobile {
+    display: none;
+  }
+  .container .card .card-content {
+    flex: 0.8;
+    padding: 2.2rem;
+  }
+  .container .card .card-content .card-text h1 {
+    font-size: 2.4rem;
+    line-height: 2.3rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .container .card .card-content .card-text p {
+    font-size: 1rem;
+  }
+  .container .card .card-content .price {
+    margin: 1rem 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
